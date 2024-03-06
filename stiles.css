@@ -1,0 +1,107 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  margin-left: 25px;
+}
+.login-image {
+  flex: 1;
+  text-align: right;
+  display: block;
+  margin-left: 50px;
+  width: 100%;
+  max-width: 400px;
+}
+img {
+  width: 400px;
+  height: 600px;
+}
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 2px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #f3fcff;
+}
+
+input[type="text"] {
+  margin-bottom: 18px;
+}
+input[type="submit"] {
+  background-color: #00254e;
+  color: #fff;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.forgot-password {
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.forgot-password a {
+  text-decoration: none;
+  color: #007bff;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .login-container {
+    flex-direction: column-reverse;
+  }
+  .login-image {
+    display: block;
+  }
+  img {
+    width: 400px;
+    height: 240px;
+    border-radius: 30px;
+  }
+}
+
+.sign {
+  margin-top: 50px;
+  text-align: center;
+}
+.sign a {
+  text-decoration: none;
+  color: #007bff;
+}
+.sign a:hover {
+  text-decoration: underline;
+}
+.footer {
+  margin-top: 50px;
+  margin-left: 60px;
+  text-align: justify;
+  font-size: 14px;
+  color: #888;
+  clear: both;
+  position: fixed;
+  width: 100%;
+}
