@@ -76,6 +76,7 @@ input[type="submit"]:hover {
   }
   .login-image {
     display: block;
+    margin-right: 50px;
   }
   img {
     width: 400px;
