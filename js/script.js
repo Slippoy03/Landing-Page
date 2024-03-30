@@ -10,6 +10,38 @@ document.addEventListener("DOMContentLoaded", function () {
       var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
 
+      document
+        .getElementById("signup-link")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          window.location.href = "signup.html";
+        });
+
+      document.getElementById("error-messages").innerHTML = "";
+
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      var errors = [];
+      if (!email) {
+        errors.push("Email is required.");
+      }
+      if (!password) {
+        errors.push("Password is required.");
+      }
+
+      var errorContainer = document.getElementById("error-messages");
+      errors.forEach(function (message) {
+        var errorMessage = document.createElement("div");
+        errorMessage.textContent = message;
+        errorContainer.appendChild(errorMessage);
+      });
+
+      if (errors.length === 0) {
+        alert("Login successful!");
+      }
+
       if (!emailPattern.test(email) || !passwordPattern.test(password)) {
         document.getElementById("error-message").textContent =
           "Email atau password tidak valid.";
@@ -47,11 +79,3 @@ document.addEventListener("DOMContentLoaded", function () {
   alert("Login berhasil!");
   window.location.href = "dashboard.html";
 });
-
-document
-  .getElementById("signup-link")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-
-    window.location.href = "signup.html";
-  });
